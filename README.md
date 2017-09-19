@@ -1,0 +1,1 @@
+Reference ts files for TS implementation of /MRAIDSDK_Browser_Emulator

@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"diagnostics": true,
+		"listEmittedFiles": true,
+		"listFiles": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"outDir": "./built/",
+		"pretty": true,
+		"removeComments": true,
+		"target": "ES5",
+		"module": "commonjs",
+    		"moduleResolution": "node",
+		"declaration": true,
+		"declarationDir": "./declarations/",
+		"traceResolution": true,
+		"noImplicitAny": false
+	},
+	"include": [
+		"./src/**/*"
+	]
+}
