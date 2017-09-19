@@ -11,6 +11,10 @@ mraid.addEventListener(MRAID1Event.ready, function(){
 	console.log('ready callback triggered');
 });
 
+mraid.addEventListener(MRAID1Event.stateChange, function(state){
+	console.log('stateChange callback triggered. state:', state);
+});
+
 console.log(':::before init state', mraid.getState())
 
 mraid.init();
