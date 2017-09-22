@@ -8,14 +8,17 @@ import ExpandProperties from './ExpandProperties'
 import IMRAID from './IMRAID'
 
 class MRAID implements IMRAID {
-	private state: string;
-	private mraidEventMgr: any;
-	constructor(private placementType: string, private expandProperties: ExpandProperties){ 
+	protected state: string;
+	public mraidEventMgr: any;
+	constructor(protected placementType: string, protected expandProperties: ExpandProperties){ 
 		this.state = State.loading;
-		this.placementType = PlacementType.inline
+		this.placementType = PlacementType.inline;
+		this.init();
+	}
+	protected init(): void{		
 		this.mraidEventMgr = new EventMgr(Event);
 	}
-	init(): void{
+	start(): void{
 		this.state = State.default;
 		this.mraidEventMgr.dispatch(Event.ready);
 		this.mraidEventMgr.dispatch('stateChange', 'default');
