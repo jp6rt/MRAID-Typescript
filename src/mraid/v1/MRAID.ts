@@ -58,4 +58,4 @@ class MRAID implements IMRAID {
 	}
 }
 
-export default MRAID
+export { MRAID }

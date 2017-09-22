@@ -3,7 +3,7 @@ import PlacementType from './PlacementType'
 import Event from './Event'
 import ExpandProperties from './ExpandProperties'
 import IMRAID from './IMRAID'
-import MRAID from './MRAID'
+import { MRAID as Main } from './MRAID'
 
 export {
 	State,
@@ -11,5 +11,5 @@ export {
 	Event,
 	ExpandProperties,
 	IMRAID,
-	MRAID
+	Main
 }
