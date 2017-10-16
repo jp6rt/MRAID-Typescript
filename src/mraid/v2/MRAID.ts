@@ -8,11 +8,11 @@ import ResizeProperties from './ResizeProperties'
 import Event from './Event'
 import Features from './Features'
 import IMRAID from './IMRAID'
-
+import ISupportedFeatures from './ISupportedFeatures'
 import State from './State'
 
 class MRAID extends MRAIDV1.Main implements IMRAID {
-	protected supportedFeatures: any;
+	protected supportedFeatures: ISupportedFeatures;
 	constructor(placementType: MRAIDV1.PlacementTypeT, expandProperties: MRAIDV1.ExpandProperties, protected size: Size, protected position: Position, protected resizeProperties: ResizeProperties){
 		super(placementType, expandProperties);	
 	}

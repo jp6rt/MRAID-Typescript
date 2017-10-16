@@ -1,4 +1,4 @@
 temp/
-declarations/
 built/
 dist/
+node_modules/

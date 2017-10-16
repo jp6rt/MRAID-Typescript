@@ -1,0 +1,25 @@
+{
+	"name": "rf_ts_mraid",
+	"version": "1.0.0",
+	"description": "Creating a TS version of /MRAIDSDK_Browser_Emulator",
+	"main": "./dist/index.js",
+	"types": "./declarations/mraid/v2/bundle.d.ts",
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^2.5.3",
+		"tslint": "^5.7.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jpart-r/RF_TS_MRAID.git"
+	},
+	"author": "jpart-r",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jpart-r/RF_TS_MRAID/issues"
+	},
+	"homepage": "https://github.com/jpart-r/RF_TS_MRAID#readme"
+}
