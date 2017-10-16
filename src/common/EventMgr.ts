@@ -1,5 +1,4 @@
 import IEventMgr from './IEventMgr'
-import callback from './callback'
 
 class EventMgr<M, H> implements IEventMgr<H> {
 	private subscriptions: any = {};
@@ -11,7 +10,7 @@ class EventMgr<M, H> implements IEventMgr<H> {
 	exists(e: string): boolean {
 		return this.subscriptions.hasOwnProperty(e) && typeof this.subscriptions[e] == 'object'
 	}
-	subscribe(e: string, callback: callback, scope?: H): void {
+	subscribe(e: string, callback: Function, scope?: H): void {
 		if(!this.exists(e))
 			return;
 		let s = !!scope ? {
@@ -20,7 +19,7 @@ class EventMgr<M, H> implements IEventMgr<H> {
 		} : { callback: callback }
 		this.subscriptions[e].push(s);
 	}
-	unsubscribe(e: string, callback: callback): void {
+	unsubscribe(e: string, callback: Function): void {
 		if(!this.exists(e))
 			return;
 		for(let a in this.subscriptions[e])

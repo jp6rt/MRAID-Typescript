@@ -9,9 +9,11 @@ import Event from './Event'
 import Features from './Features'
 import IMRAID from './IMRAID'
 
+import State from './State'
+
 class MRAID extends MRAIDV1.Main implements IMRAID {
 	protected supportedFeatures: any;
-	constructor(placementType: string, expandProperties: MRAIDV1.ExpandProperties, protected size: Size, protected position: Position, protected resizeProperties: ResizeProperties){
+	constructor(placementType: MRAIDV1.PlacementTypeT, expandProperties: MRAIDV1.ExpandProperties, protected size: Size, protected position: Position, protected resizeProperties: ResizeProperties){
 		super(placementType, expandProperties);	
 	}
 	protected init(): void{
@@ -24,6 +26,12 @@ class MRAID extends MRAIDV1.Main implements IMRAID {
 			inlineVideo: !0
 		}
 	}
+	/*
+	start(): void{
+		super.start()
+		this.state = State.resized; ??  state is typed with V1 interface
+	}
+	*/
 	getVersion(): string{
 		return '2.0.0'
 	}
@@ -45,7 +53,7 @@ class MRAID extends MRAIDV1.Main implements IMRAID {
 	playVideo(uri: string): void{
 
 	}
-	setResizeProperties(resizeProperties: ResizeProperties): void{
+	setResizeProperties(resizeProperties: ResizeProperties): void{		
 		this.resizeProperties = resizeProperties
 	}
 	supports(feature: string): boolean{

@@ -1,16 +1,17 @@
 import EventMgr from '../../common/EventMgr'
-import callback from '../../common/callback'
-
 import State from './State'
+import StateT from './StateT'
 import PlacementType from './PlacementType'
+import PlacementTypeT from './PlacementTypeT'
 import Event from './Event'
+import EventT from './EventT'
 import ExpandProperties from './ExpandProperties'
 import IMRAID from './IMRAID'
 
 class MRAID implements IMRAID {
-	protected state: string;
+	protected state: StateT;
 	public mraidEventMgr: any;
-	constructor(protected placementType: string, protected expandProperties: ExpandProperties){ 
+	constructor(protected placementType: PlacementTypeT, protected expandProperties: ExpandProperties){ 
 		this.state = State.loading;
 		this.placementType = PlacementType.inline;
 		this.init();
@@ -23,7 +24,7 @@ class MRAID implements IMRAID {
 		this.mraidEventMgr.dispatch(Event.ready);
 		this.mraidEventMgr.dispatch('stateChange', 'default');
 	}
-	addEventListener(event: string, callback: callback): void{
+	addEventListener(event: EventT, callback: Function): void{
 		this.mraidEventMgr.subscribe(event, callback)
 	}
 	close(): void{
@@ -35,10 +36,10 @@ class MRAID implements IMRAID {
 	getExpandProperties(): ExpandProperties {
 		return this.expandProperties
 	}
-	getPlacementType(): string{
+	getPlacementType(): PlacementTypeT{
 		return this.placementType
 	}
-	getState(): string{
+	getState(): StateT{
 		return this.state
 	}
 	getVersion(): string{
@@ -50,7 +51,7 @@ class MRAID implements IMRAID {
 	open(url: string): void{
 
 	}
-	removeEventListener(event: string, callback: callback): void{
+	removeEventListener(event: EventT, callback: Function): void{
 		this.mraidEventMgr.unsubscribe(event, callback)
 	}
 	setExpandProperties(expandProperties: ExpandProperties): void{

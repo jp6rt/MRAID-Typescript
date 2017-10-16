@@ -2,4 +2,4 @@ interface Callback {
 	(...args): any
 }
 
-export default Callback
+//export default Callback

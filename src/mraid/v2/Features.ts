@@ -1,4 +1,6 @@
-let Features = {
+import FeaturesI from './FeaturesI'
+
+let Features: FeaturesI = {
 	sms: 'sms',
 	tel: 'tel',
 	calendar: 'calendar',

@@ -1,4 +1,6 @@
-let State = {
+import StateI from './StateI'
+
+let State: StateI = {
 	loading: 'loading',
 	default: 'default',
 	expanded: 'expanded',

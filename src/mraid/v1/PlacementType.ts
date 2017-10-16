@@ -1,4 +1,6 @@
-let PlacementType = {
+import PlacementTypeI from './PlacementTypeI'
+
+let PlacementType: PlacementTypeI = {
 	inline: 'inline',
 	interstitial: 'interstitial'
 }

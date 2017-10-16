@@ -6,15 +6,15 @@
 		"listFiles": true,
 		"strict": true,
 		"strictNullChecks": true,
-		"outDir": "./built/",
+		"outDir": "./dist",
 		"pretty": true,
 		"removeComments": true,
 		"target": "ES5",
 		"module": "commonjs",
-    		"moduleResolution": "node",
+    	"moduleResolution": "node",
 		"declaration": true,
 		"declarationDir": "./declarations/",
-		"traceResolution": true,
+		"traceResolution": false,
 		"noImplicitAny": false
 	},
 	"include": [

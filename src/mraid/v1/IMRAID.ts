@@ -1,17 +1,19 @@
-import callback from '../../common/callback'
 import ExpandProperties from './ExpandProperties'
+import EventT from './EventT'
+import PlacementTypeT from './PlacementTypeT'
+import StateT from './StateT'
 
 interface IMRAID {
-	addEventListener(event: string, callback: callback): void
+	addEventListener(event: EventT, callback: Function): void
 	close(): void
 	expand(url?: string): void
 	getExpandProperties(): ExpandProperties
-	getPlacementType(): string
-	getState(): string
+	getPlacementType(): PlacementTypeT
+	getState(): StateT
 	getVersion(): string
 	isViewable(): boolean
 	open(url: string): void
-	removeEventListener(event: string, callback: callback): void
+	removeEventListener(event: EventT, callback: Function): void
 	setExpandProperties(expandProperties: ExpandProperties): void
 	useCustomClose(customClose: boolean): void
 }

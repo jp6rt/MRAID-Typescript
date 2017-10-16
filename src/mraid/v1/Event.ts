@@ -1,3 +1,5 @@
+import EventI from './EventI'
+
 let Event = {
 	ready: 'ready',
 	error: 'error',

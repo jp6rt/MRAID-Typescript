@@ -1,14 +1,15 @@
-import State from './State'
+import StateT from './StateT'
+import PlacementTypeT from './PlacementTypeT'
 import PlacementType from './PlacementType'
-import Event from './Event'
 import ExpandProperties from './ExpandProperties'
 import IMRAID from './IMRAID'
 import { MRAID as Main } from './MRAID'
 
+
 export {
-	State,
+	StateT,
+	PlacementTypeT,
 	PlacementType,
-	Event,
 	ExpandProperties,
 	IMRAID,
 	Main

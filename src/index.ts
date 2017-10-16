@@ -28,3 +28,6 @@ console.log('-supports calendar event', mraid.supports(MRAID.Features.calendar))
 console.log('-supports storePicture event', mraid.supports(MRAID.Features.storePicture))
 console.log('-supports tel event', mraid.supports(MRAID.Features.tel))
 console.log('-isViewable', mraid.isViewable())
+
+//sdfsdfsdfsdf
+//mraid.addEventListener(MRAID.Event.ready, "asdf");

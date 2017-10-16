@@ -1,4 +1,6 @@
-let Event = {
+import EventI from './EventI'
+
+let Event: EventI = {
 	ready: 'ready',
 	error: 'error',
 	stateChange: 'stateChange',
